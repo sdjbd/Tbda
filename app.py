@@ -230,7 +230,6 @@ def gantt_1(start, end):
     Endings=[datetime.strptime(periods_auto_manual_df["end"][i], "%d/%m/%Y %H:%M:%S").strftime("%Y-%m-%d %H:%M:%S") for i in range(len(periods_auto_manual_df["end"]))]
 
 
-    periods_auto_manual_df
 
     #MODE GANTT
     
@@ -285,7 +284,6 @@ def gantt_2(start, end):
     Endings=[datetime.strptime(periods_auto_manual_df["end"][i], "%d/%m/%Y %H:%M:%S").strftime("%Y-%m-%d %H:%M:%S") for i in range(len(periods_auto_manual_df["end"]))]
 
 
-    periods_auto_manual_df
     
 
     joint_df['mode']=""
