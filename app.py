@@ -4,6 +4,7 @@ from sqlalchemy import create_engine
 import matplotlib as plt
 from datetime import datetime
 import streamlit as st
+import plotly.express as px
 
 
 
