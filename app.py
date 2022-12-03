@@ -410,7 +410,7 @@ with tab2:
                 st.write(energy)
 
                 select = st.selectbox('select variable', energy["name"])
-                if st.button('Show energy cons'):
+                if st.checkbox('Show energy cons'):
                     
                     dates = [x for x in energy.loc[energy['name'] == select, 'date']]
                     values = [x for x in energy.loc[energy['name'] == select, 'value']]
