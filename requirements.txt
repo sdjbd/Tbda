@@ -6,4 +6,4 @@ matplotlib
 datetime
 psycopg2-binary
 plotly
-
+itertools
