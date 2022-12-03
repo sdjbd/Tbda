@@ -5,6 +5,7 @@ import matplotlib as plt
 from datetime import datetime
 import streamlit as st
 import plotly.express as px
+from itertools import chain
 
 
 
@@ -414,8 +415,10 @@ with tab2:
                     
                     dates = [x for x in energy.loc[energy['name'] == select, 'date']]
                     values = [x for x in energy.loc[energy['name'] == select, 'value']]
-                    dates  = [item for dates in l for item in dates]
-                    values  = [item for values in l for item in values]
+                    dates = list(chain.from_iterable(dates))
+                    values = list(chain.from_iterable(values))
+                    #dates  = [item for dates in l for item in dates]
+                    #values  = [item for values in l for item in values]
                     data_plot = list(zip(dates,values))
                     data_plot_df = pd.DataFrame(data_plot, columns =['date', 'value'])
                     st.line_chart(data_plot_df, x='date', y='value')
